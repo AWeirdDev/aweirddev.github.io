@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --gradient: linear-gradient(108deg, #0894FF, #C959DD 34%, #FF2E54 68%, #FF9004);
+    --system: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.wrapper h1 {
+    background: #1d1d1f;
+    background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    background-image: var(--gradient);
+    font-family: "Inter Tight", var(--system);
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 3.5rem;
+}
+
+.wrapper .pill {
+    background: rgba(8, 148, 255, 0.21);
+    border: 1.5px solid rgba(8, 148, 255, 0.33);
+    border-radius: 30rem;
+    padding: 4px 12px;
+    font-family: "Inter", var(--system);
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    color: rgb(5, 60, 102);
+    margin-bottom: 32px;
+}
+
+.wrapper p {
+    margin-top: 12px;
+    font-family: "Inter", var(--system);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 19px;
+    max-width: 600px;
+}
+
+.wrapper {
+    overflow-y: hidden;
+}
+
+.wrapper .bento {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.wrapper .bento-cell {
+    display: flex;
+    flex-direction: row;
+    gap: 36px;
+}
+
+.wrapper .bento-cell .card {
+    padding: 40px;
+    background: #f4f3f2;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 490px;
+}
+
+.wrapper .bento-cell .card .group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+}
+
+.wrapper .bento-cell .card img {
+    border-radius: 26px;
+}
+
+.wrapper .bento-cell .card h2 {
+    font-family: "Inter", var(--system);
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 24px;
+}
+
+@media screen and (max-width: 1510px) {
+    .wrapper {
+        width: unset;
+        height: unset;
+        flex-direction: column;
+        overflow-y: hidden;
+        padding-top: 120px;
+    }
+
+    .wrapper .bento {
+        transform: rotate(90deg) scale(0.85);
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    #iphone {
+        display: none;
+    }
+
+    .wrapper .bento {
+        transform: none;
+        align-items: center;
+    }
+
+    .wrapper .bento .card {
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #texts {
+        align-items: center;
+    }
+
+    #texts p {
+        text-align: center;
+    }
+
+    #macbook {
+        display: none;
+    }
+
+    .wrapper .bento .card {
+        margin-top: 50px;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper h1 {
+        font-size: 36px;
+    }
+
+    .wrapper p {
+        font-size: 16px;
+        max-width: 80%;
+    }
+
+    .wrapper .bento .card {
+        padding: 20px;
+    }
+
+    .wrapper .bento .card .group img {
+        width: 40px;
+        height: 40px;
+        border-radius: 6px;
+    }
+
+    .wrapper .bento .card h2 {
+        display: none;
+    }
+}
