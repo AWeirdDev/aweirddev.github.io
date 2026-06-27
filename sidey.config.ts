@@ -1,24 +1,19 @@
 // sidey.config.ts
 
 export const sideyConfig = {
-  /**
-   * Global SEO and Site Identity
-   * -------------------------------------------------------------------------
-   * These values populate your HTML meta tags, RSS feed definitions,
-   * and structural header components across the template.
-   */
   site: {
     // The main title displayed in browser tabs and search engine results
-    title: "Astro Sidey",
+    title: "AWeirdDev",
 
     // A short fallback summary of your site used for SEO and social share cards
-    description: "A minimal, content-focused Astro theme for personal sites.",
+    description:
+      "im a portable restroom somewhere in taipei near a baseball field",
 
     // The production domain where your site is deployed (no trailing slash)
-    url: "https://sidey.odhyp.com",
+    url: "https://aweird.me",
 
     // Your name, utilized in copyright strings and author meta tags
-    author: "Odhy Pradhana",
+    author: "AWeirdDev",
 
     // The primary language attribute for HTML accessibility engines (e.g., "en", "id")
     locale: "en",
@@ -33,8 +28,7 @@ export const sideyConfig = {
   navigation: [
     { label: "Home", href: "/" },
     { label: "Writings", href: "/writings" },
-    { label: "About", href: "/about" },
-    { label: "RSS", href: "/rss.xml" },
+    { label: "RSS", href: "/rss.xml", external: true },
   ],
 }
 

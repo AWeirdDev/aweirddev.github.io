@@ -1,5 +1,6 @@
 ---
 import { config } from "@parseConfig"
+import { ArrowUpRightIcon } from "@lucide/astro"
 
 const navMenu = config.navigation
 
@@ -16,13 +17,16 @@ const isActive = (href: string) =>
       navMenu.map((nav) => (
         <a
           href={nav.href}
+          target={nav.external ? "_blank" : "_self"}
           class:list={[
             "py-0.5 text-muted-foreground transition-colors duration-200 ease-out hover:text-foreground",
+            "flex flex-row items-center gap-1",
             isActive(nav.href) &&
               "font-medium text-foreground! underline decoration-muted-foreground/50 underline-offset-2 hover:decoration-muted-foreground",
           ]}
         >
           {nav.label}
+          {nav.external && <ArrowUpRightIcon size={18} />}
         </a>
       ))
     }

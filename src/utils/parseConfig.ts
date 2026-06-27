@@ -15,6 +15,7 @@ const configSchema = z.object({
     z.object({
       label: z.string(),
       href: z.string(),
+      external: z.boolean().optional(),
     })
   ),
 })
