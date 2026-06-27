@@ -23,6 +23,7 @@ import { sideyConfig } from "./sidey.config.ts"
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://aweirddev.github.io",
   devToolbar: {
     enabled: false,
   },
